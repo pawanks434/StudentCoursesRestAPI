@@ -15,7 +15,9 @@ pipeline {
         }
         stage('scan and push') {
             steps {
+            sh 'echo docker scan shaikkhajaibrahim/spc:latest'    
             sh 'docker image push pawanks434/spc:latest'
+            
             }
         }
         
