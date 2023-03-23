@@ -1,13 +1,11 @@
 pipeline {
     agent any
-    triggers {
-        pollSCM(* * * * * )
-    }
+        triggers { pollSCM('* * * * *') }
     stages {
         stage('vcs') {
             steps {
-                 git url : 'https://github.com/pawanks434/StudentCoursesRestAPI.git',
-                 branch: develop
+                 git url: 'https://github.com/pawanks434/StudentCoursesRestAPI.git',
+                 branch: 'develop'
             }
         }
         stage('build') {
