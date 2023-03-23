@@ -1,6 +1,6 @@
 pipeline {
     agent any
-        triggers { pollSCM('* * * * *') }
+        triggers { pollSCM('* 11 * * 1-5') }
     stages {
         stage('vcs') {
             steps {
